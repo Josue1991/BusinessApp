@@ -1,0 +1,32 @@
+{
+  "name": "apps-erp-mobile",
+  "projectType": "application",
+  "sourceRoot": "apps/apps-erp-mobile/src",
+  "targets": {
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "browserTarget": "apps-erp-mobile:build",
+        "port": 8100
+      }
+    },
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/apps-erp-mobile",
+        "index": "apps/apps-erp-mobile/src/index.html",
+        "main": "apps/apps-erp-mobile/src/main.ts",
+        "polyfills": "apps/apps-erp-mobile/src/polyfills.ts",
+        "tsConfig": "apps/apps-erp-mobile/tsconfig.app.json",
+        "assets": [
+          "apps/apps-erp-mobile/src/favicon.ico",
+          "apps/apps-erp-mobile/src/assets"
+        ],
+        "styles": ["apps/apps-erp-mobile/src/theme/variables.css"],
+        "scripts": []
+      }
+    }
+  },
+  "tags": []
+}
